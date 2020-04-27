@@ -608,7 +608,7 @@ const episodes = {
 
 jest.mock("./api/fetchShow");
 
-test('Dropdown menu is rendering on app component', async () => {
+test('Dropdown menu is rendering correctly with 4 items on app component', async () => {
     fetchShow.mockResolvedValueOnce(episodes);
     const { getByText, getAllByText } = render(<App />)
 
@@ -628,11 +628,11 @@ test('Dropdown menu is rendering on app component', async () => {
 
 });
 
-// test ('app renders', async () => { 
+test ('app renders',() => {render(<App />)
+}
 
-// render(<App />)
 
-// });
+);
 
 
 // test('dropdown loads items eventually', async () => {
